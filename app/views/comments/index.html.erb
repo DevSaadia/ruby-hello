@@ -1,12 +1,14 @@
 <div class="flex w-full flex-col items-center justify-center border border-black">
    <h1 class="text-5xl w-full flex justify-center items-center font-bold my-2 py-5 bg-amber-100 "> Hello World! </h1>
    <p>Leave me anonymous comments.</p>
-
-   <div class="bg-red-200 px-4 m-4 gap-4 flex flex-col"> 
+   <div class="w-full ml-16">
+<%= link_to 'New comment', "comments/new", class:"bg-red-700 text-white py-2 px-4" %> 
+</div>
+   <div class="bg-red-200 px-4 m-4 w-full gap-4 flex flex-col"> 
        <!-- Your code here -->
            
 <% @comments.each do |comment| %> 
-  <div class="comment m-4 bg-red-400 px-4 py-2"> 
+  <div class="comment m-4 w-96 bg-red-400 px-4 py-2"> 
     <p class="content"><%= comment.content %></p> 
     <p class="time"><%= comment.created_at %></p> 
   </div> 
@@ -14,5 +16,5 @@
 
 
    </div>
-   <%= link_to 'New comment', "comments/new", class:"bg-red-700 text-white py-2 px-4" %> 
+   
 </div>
