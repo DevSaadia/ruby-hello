@@ -8,9 +8,9 @@
        <!-- Your code here -->
            
 <% @comments.each do |comment| %> 
-  <div class="comment m-4 w-96 bg-red-400 px-4 py-2"> 
+  <div class="comment m-4 w-96 bg-white px-4 py-2"> 
     <p class="content"><%= comment.content %></p> 
-    <p class="time"><%= comment.created_at %></p> 
+    <p class="time text-blue-400 text-xs"><%= comment.created_at %></p> 
   </div> 
 <% end %> 
 
